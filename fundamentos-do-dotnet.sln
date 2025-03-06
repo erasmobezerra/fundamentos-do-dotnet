@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuiltInTypes", "Modulo 05 -
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableTypes", "Modulo 05 - Linguagem de Programacao\NullableTypes\NullableTypes.csproj", "{A5F8DE53-2B47-4AC1-875C-4E72D4960CAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversaoDeTipos", "Modulo 05 - Linguagem de Programacao\ConversaoDeTipos\ConversaoDeTipos.csproj", "{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -88,6 +90,10 @@ Global
 		{A5F8DE53-2B47-4AC1-875C-4E72D4960CAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5F8DE53-2B47-4AC1-875C-4E72D4960CAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5F8DE53-2B47-4AC1-875C-4E72D4960CAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +106,7 @@ Global
 		{88C15CF8-BD90-43DD-805F-55C4D666D0D8} = {2C6693C3-1263-4D07-BC15-5CD86E10F3E3}
 		{ED6CA76C-319E-4EF9-9958-35FEF12283BE} = {2C6693C3-1263-4D07-BC15-5CD86E10F3E3}
 		{A5F8DE53-2B47-4AC1-875C-4E72D4960CAA} = {2C6693C3-1263-4D07-BC15-5CD86E10F3E3}
+		{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5} = {2C6693C3-1263-4D07-BC15-5CD86E10F3E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5497F0DC-6A2A-4428-A8ED-29C6DFA74F21}

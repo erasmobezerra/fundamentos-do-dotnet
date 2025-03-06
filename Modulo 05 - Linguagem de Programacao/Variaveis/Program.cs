@@ -1,5 +1,5 @@
-﻿int idade; // Correto inicia com ZERO
-// int idade = 25; // Correto inicia com 25
+﻿// int idade; // Correto inicia com ZERO
+int idade = 25; // Correto inicia com 25
 // var idade = 25; // Correto inicia com 25
 // var idade; // Errado
 
