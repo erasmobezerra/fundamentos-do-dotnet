@@ -11,23 +11,30 @@ uint inteiroSemSinal = (uint)inteiro; // Conversão explícita
 Console.WriteLine(inteiroSemSinal);
 
 
-// Parse -> Conversão de string para outro tipo primitivo. Caso a string não seja compatível com o tipo, o parse irá falhar.
+// Parse -> Conversão de string para outro tipo primitivo. 
 //       -> Não funciona para conversoes explicitas. Para isso, utilizamos o Convert
-int numero = int.Parse("1000");
+//       -> Caso não consiga converter, retorna uma exceção
+double numero = int.Parse("1000");
 Console.WriteLine(numero);
+var dataTime = DateTime.Parse("01/01/2023 00:00:00"); 
+Console.WriteLine("dataTime: " + dataTime);
 
 
 // Convert -> Semelhante ao Parse, porém consegue converter vários tipos de valor, não apenas Strings
 //         -> Deve-se informar o tipo na chamada da conversao
+//         -> Caso não consiga converter, retorna uma exceção 
 int numero2 = Convert.ToInt32("10000");
 Console.WriteLine(numero2);
 Console.WriteLine(Convert.ToBoolean(0));
+
+var dataTime2 = Convert.ToDateTime("01/01/2023 00:00:00");
+Console.WriteLine(dataTime2);
 
 
 // Método TryParse -> Para conversões de string para tipos numéricos ou para data/hora, 
 //                    os métodos TryParse são ideais, pois tentam realizar a conversão e 
 //                    retornam um booleano indicando o sucesso, sem lançar exceções.
-string input = "789";
+string? input = null;
 if (int.TryParse(input, out int resultado))
 {
     Console.WriteLine("Conversão bem-sucedida: " + resultado);
@@ -40,9 +47,7 @@ Console.WriteLine("");
 
 
 
-// Para conversões seguras entre tipos de referência, operador "as" / Pattern Matching: 
-
-// Operador "as": Útil para conversões entre tipos de referência. Ele tenta converter o 
+// Operador "as": Útil para conversões explícitas entre objetos ou entre tipos de referência. Ele tenta converter o 
 //                objeto para o tipo desejado e retorna null se a conversão não for possível, evitando exceções.
 object obj = "exemplo";
 string? texto = obj as string;
@@ -53,7 +58,28 @@ if (texto != null)
 Console.WriteLine("");
 
 
-// Pattern Matching: Com o uso do is ou switch com pattern matching, você pode verificar o tipo antes de realizar a conversão.
+
+// OPERADOR IS
+// O is é um operador de comparação, que podemos utilizar para comparar tipos tanto primitivos quanto complexos, 
+// eliminando a necessidade do typeof, até então presente como única opção.
+
+
+var someText = "This is a string";
+var result = someText is string; // retorna um valor booleano
+Console.WriteLine("Result: " + result);
+
+// Também podemos utilizar a seguinte sintaxe:
+if (someText is string result2)
+{
+    Console.WriteLine("A variável someText é uma string: " + result2);
+} 
+else
+{
+    Console.WriteLine("A variável someText não é uma string.");
+} 
+
+
+// Comparando objeto com tipos primitivos
 object valor1 = 100;
 if (valor1 is int numeroInteiro)
 {
@@ -64,7 +90,15 @@ else
     Console.WriteLine("Valor não é um inteiro.");
 }
 
+// Comparando objeto com DateTime
+object obj3 = DateTime.Now;
+if (obj3 is DateTime)
+{
+    Console.WriteLine("É um DateTime.");
+}
 
+
+// Utilizando switch para comparar objetos tipos primitivos
 object valor2 = "Olá, mundo!";
 switch (valor2)
 {
@@ -81,4 +115,11 @@ switch (valor2)
         Console.WriteLine("Tipo desconhecido");
         break;
 }
+
+
+
+
+
+
+
 

@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableTypes", "Modulo 05 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversaoDeTipos", "Modulo 05 - Linguagem de Programacao\ConversaoDeTipos\ConversaoDeTipos.csproj", "{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TiposDeOperadores", "Modulo 05 - Linguagem de Programacao\TiposDeOperadores\TiposDeOperadores.csproj", "{856AE80A-AFD7-465E-8C8B-93348207731F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +96,10 @@ Global
 		{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856AE80A-AFD7-465E-8C8B-93348207731F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856AE80A-AFD7-465E-8C8B-93348207731F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856AE80A-AFD7-465E-8C8B-93348207731F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856AE80A-AFD7-465E-8C8B-93348207731F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,6 +113,7 @@ Global
 		{ED6CA76C-319E-4EF9-9958-35FEF12283BE} = {2C6693C3-1263-4D07-BC15-5CD86E10F3E3}
 		{A5F8DE53-2B47-4AC1-875C-4E72D4960CAA} = {2C6693C3-1263-4D07-BC15-5CD86E10F3E3}
 		{3C9D0CF9-7E92-4FCD-8F8D-240C44D016A5} = {2C6693C3-1263-4D07-BC15-5CD86E10F3E3}
+		{856AE80A-AFD7-465E-8C8B-93348207731F} = {2C6693C3-1263-4D07-BC15-5CD86E10F3E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5497F0DC-6A2A-4428-A8ED-29C6DFA74F21}
