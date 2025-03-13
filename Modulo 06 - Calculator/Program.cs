@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Calculator
+﻿namespace Calculator
 {
     class Program
     {
@@ -31,7 +29,7 @@ namespace Calculator
                 case 2: Subtracao(); break;
                 case 3: Divisao(); break;
                 case 4: Multiplicacao(); break;
-                case 5: System.Environment.Exit(0); break;
+                case 5: Environment.Exit(0); break; // faz com que o console termine imediatamente a execução
                 default: Menu(); break;
             }
         }
@@ -53,7 +51,7 @@ namespace Calculator
             Console.WriteLine($"O resultado da soma é {resultado}");
             // Console.WriteLine($"O resultado da soma é {v1 + v2}");
             // Console.WriteLine("O resultado da soma é " + (v1 + v2));
-            Console.ReadKey();
+            Console.ReadKey(); // o programa pausa e aguarda que o usuário pressione uma tecla
             Menu();
         }
 
@@ -71,7 +69,7 @@ namespace Calculator
 
             float resultado = v1 - v2;
             Console.WriteLine($"O resultado da subtração é {resultado}");
-            Console.ReadKey();
+            Console.ReadKey(); // o programa pausa e aguarda que o usuário pressione uma tecla
             Menu();
         }
 
@@ -89,7 +87,7 @@ namespace Calculator
 
             float resultado = v1 / v2;
             Console.WriteLine($"O resultado da divisão é {resultado}");
-            Console.ReadKey();
+            Console.ReadKey(); // o programa pausa e aguarda que o usuário pressione uma tecla
             Menu();
         }
 
@@ -107,7 +105,7 @@ namespace Calculator
 
             float resultado = v1 * v2;
             Console.WriteLine("O resultado da multiplicação é " + (v1 * v2));
-            Console.ReadKey();
+            Console.ReadKey(); // o programa pausa e aguarda que o usuário pressione uma tecla
             Menu();
         }
     }
