@@ -20,7 +20,7 @@ namespace Stopwatch
 
             string data = Console.ReadLine().ToLower();
             char type = char.Parse(data.Substring(data.Length - 1, 1)); // pega o ultimo caractere
-            int time = int.Parse(data.Substring(0, data.Length - 1)); // 
+            int time = int.Parse(data.Substring(0, data.Length - 1)); // pega todos os caracteres menos o ultimo
             int multiplier = 1;
 
             // multiplica o tempo por 60 se o type for m
