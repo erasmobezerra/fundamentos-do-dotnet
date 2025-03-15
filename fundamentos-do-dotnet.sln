@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Structs", "Modulo 05 - Ling
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Modulo 06 - Calculator\Calculator.csproj", "{F8DAFC10-1565-4BD0-9B82-D6F161B07503}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stopwatch", "Modulo 08 - Stopwatch\Stopwatch.csproj", "{0061A201-03F8-4EF0-AB7C-A2156D69997E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{F8DAFC10-1565-4BD0-9B82-D6F161B07503}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8DAFC10-1565-4BD0-9B82-D6F161B07503}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8DAFC10-1565-4BD0-9B82-D6F161B07503}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0061A201-03F8-4EF0-AB7C-A2156D69997E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0061A201-03F8-4EF0-AB7C-A2156D69997E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0061A201-03F8-4EF0-AB7C-A2156D69997E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0061A201-03F8-4EF0-AB7C-A2156D69997E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{95F0244D-8B11-47E8-88D6-081042FA4007} = {F1D6E860-8136-480E-A8AE-70601000040A}

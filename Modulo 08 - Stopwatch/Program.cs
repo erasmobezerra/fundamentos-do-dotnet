@@ -19,19 +19,22 @@ namespace Stopwatch
             Console.WriteLine("Quanto tempo deseja contar?");
 
             string data = Console.ReadLine().ToLower();
-            char type = char.Parse(data.Substring(data.Length - 1, 1));
-            int time = int.Parse(data.Substring(0, data.Length - 1));
+            char type = char.Parse(data.Substring(data.Length - 1, 1)); // pega o ultimo caractere
+            int time = int.Parse(data.Substring(0, data.Length - 1)); // 
             int multiplier = 1;
 
+            // multiplica o tempo por 60 se o type for m
             if (type == 'm')
                 multiplier = 60;
 
+            // se o time for 0, fecha o programa
             if (time == 0)
                 System.Environment.Exit(0);
 
             PreStart(time * multiplier);
         }
 
+        /// Prepara o inicio do contador, com uma contagem regressiva de 3 segundos, antes de iniciar o contador
         static void PreStart(int time)
         {
             Console.Clear();
@@ -45,21 +48,22 @@ namespace Stopwatch
             Start(time);
         }
 
+        /// Inicia o contador regressivo com o tempo especificado
         static void Start(int time)
         {
             int currentTime = 0;
 
             while (currentTime != time)
             {
-                Console.Clear();
+                Console.Clear(); // limpa a tela
                 currentTime++;
                 Console.WriteLine(currentTime);
-                Thread.Sleep(1000);
+                Thread.Sleep(1000); // aguarda 1 segundo a cada loop
             }
 
             Console.Clear();
             Console.WriteLine("Stopwatch finalizado");
-            Thread.Sleep(2500);
+            Thread.Sleep(2500); // aguarda 2,5 segundos
             Menu();
         }
     }
