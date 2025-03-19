@@ -96,6 +96,16 @@ namespace MyApp
             // Console.WriteLine(texto.IndexOf("e")); // 11 
             // Console.WriteLine(texto.LastIndexOf("t")); // 19
 
+
+            // TOUPPER e TOLOWER
+            // -> Converte uma string para maiúsculo ou minúsculo
+            // -> Aceita valor null
+            var texto = "Testando a string";
+            Console.WriteLine(texto.ToUpper()); // TESTANDO A STRING
+            Console.WriteLine(texto.ToLower()); // testando a string
+
+            
+
         }
     }
 }
