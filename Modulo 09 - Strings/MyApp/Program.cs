@@ -26,7 +26,7 @@ namespace MyApp
 
             
             // CONCATENAÇÃO DE STRINGS
-            var price = 10.2;
+            // var price = 10.2;
 
             // 1ª forma de interpolação de strings
             //var text = "O preço do produto é " + price + " reais apenas na promoção.";
@@ -53,6 +53,8 @@ namespace MyApp
 
 
             // COMPARAÇÃO DE STRINGS
+            // -> CompareTo: Retorna 0 se for igual, 1 se for maior, -1 se for menor
+            // -> Contains: Verifica se um texto contém outro. Não aceita valor Null 
 
             // var texto = "Testando";
             // Console.WriteLine(texto.CompareTo("Testando")); // 0 pois os textos são iguais
@@ -65,12 +67,25 @@ namespace MyApp
 
 
             // StartsWith/EndsWith
+            // -> Verifica se um texto inicia ou termina com outro
+
+            // var texto = "Testando a string";
+            // Console.WriteLine(texto.StartsWith("Test")); // true
+            // Console.WriteLine(texto.StartsWith("test")); // false
+            // Console.WriteLine(texto.StartsWith("test", StringComparison.OrdinalIgnoreCase)); // true           
+            // Console.WriteLine(texto.EndsWith("ings")); // false
+            // Console.WriteLine(texto.EndsWith("ing")); // true
+
+
+            // EQUALS
+            // -> Verifica se toda a extensão de um texto é igual ao outro
+            // -> Aceita valor Null 
+
             var texto = "Testando a string";
-            Console.WriteLine(texto.StartsWith("Test")); // true
-            Console.WriteLine(texto.StartsWith("test")); // false
-            Console.WriteLine(texto.StartsWith("test", StringComparison.OrdinalIgnoreCase)); // true           
-            Console.WriteLine(texto.EndsWith("ings")); // false
-            Console.WriteLine(texto.EndsWith("ing")); // true
+            Console.WriteLine(texto.Equals("Testando a string")); // true
+            Console.WriteLine(texto.Equals("testando a string")); // false
+            Console.WriteLine(texto.Equals("testando a string", StringComparison.OrdinalIgnoreCase)); // true
+            Console.WriteLine(texto.Equals(null)); // false
         }
     }
 }
