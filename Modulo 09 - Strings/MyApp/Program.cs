@@ -100,11 +100,20 @@ namespace MyApp
             // TOUPPER e TOLOWER
             // -> Converte uma string para maiúsculo ou minúsculo
             // -> Aceita valor null
-            var texto = "Testando a string";
-            Console.WriteLine(texto.ToUpper()); // TESTANDO A STRING
-            Console.WriteLine(texto.ToLower()); // testando a string
+            // var texto = "Testando a string";
+            // Console.WriteLine(texto.ToUpper()); // TESTANDO A STRING
+            // Console.WriteLine(texto.ToLower()); // testando a string
 
-            
+
+            //INSERT, REMOVE E LENGTH
+            // -> INSERT -> Insere um texto em uma string a partir do index informado
+            // -> REMOVE -> Remove um texto de uma string a partir do index informado
+            // -> LENGTH -> Retorna o tamanho/quantidade de caracteres de uma string
+            var texto = "Testando a string"; 
+            Console.WriteLine(texto.Insert(17, " inserindo.")); // Testando a string inserindo.
+            Console.WriteLine(texto.Remove(0, 9)); // a string
+            Console.WriteLine(texto.Length); // 17
+
 
         }
     }
