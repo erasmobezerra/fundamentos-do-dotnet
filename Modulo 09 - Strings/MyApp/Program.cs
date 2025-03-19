@@ -46,10 +46,21 @@ namespace MyApp
             // Console.WriteLine(text);
 
             // @ -> ignora os caracteres de escape, incluindo  o que estiver dentro de { }
-            var text = @"O preço do produto é {price} 
-            reais \n apenas na promoção."; 
+            //var text = @"O preço do produto é {price} 
+            //reais \n apenas na promoção."; 
 
-            Console.WriteLine(text);
+            //Console.WriteLine(text);
+
+
+            // COMPARAÇÃO DE STRINGS
+
+            var texto = "Testando";
+            Console.WriteLine(texto.CompareTo("Testando")); // 0 pois os textos são iguais
+            Console.WriteLine(texto.CompareTo("testando")); // 1 pois 
+            Console.WriteLine(texto.Contains('t')); // true pois texto contém a letra 't'
+            Console.WriteLine(texto.Contains("testando")); // false pois C# é case-sensitive
+            Console.WriteLine(texto.Contains("testando", StringComparison.OrdinalIgnoreCase)); // true pois é ignorada a case-sensitive
+            Console.WriteLine(texto.Contains(null)); // Console.WriteLine(texto.Contains("testando"));
 
         }
     }
