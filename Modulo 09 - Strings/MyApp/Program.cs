@@ -81,11 +81,21 @@ namespace MyApp
             // -> Verifica se toda a extensão de um texto é igual ao outro
             // -> Aceita valor Null 
 
-            var texto = "Testando a string";
-            Console.WriteLine(texto.Equals("Testando a string")); // true
-            Console.WriteLine(texto.Equals("testando a string")); // false
-            Console.WriteLine(texto.Equals("testando a string", StringComparison.OrdinalIgnoreCase)); // true
-            Console.WriteLine(texto.Equals(null)); // false
+            // var texto = "Testando a string";
+            // Console.WriteLine(texto.Equals("Testando a string")); // true
+            // Console.WriteLine(texto.Equals("testando a string")); // false
+            // Console.WriteLine(texto.Equals("testando a string", StringComparison.OrdinalIgnoreCase)); // true
+            // Console.WriteLine(texto.Equals(null)); // false
+
+
+            // INDEXOF e LASTINDEXOF
+            // -> INDEXOF Verifica a PRIMEIRA posição/índex de uma string dentro de outra 
+            // -> LASTINDEXOF Verifica a ÚLTIMA posição/índex de uma string dentro de outra
+            // -> Não recebem valor null
+            // var texto = "Este texto é um teste";
+            // Console.WriteLine(texto.IndexOf("e")); // 11 
+            // Console.WriteLine(texto.LastIndexOf("t")); // 19
+
         }
     }
 }
