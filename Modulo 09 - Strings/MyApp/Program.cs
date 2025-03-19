@@ -56,63 +56,63 @@ namespace MyApp
             // -> CompareTo: Retorna 0 se for igual, 1 se for maior, -1 se for menor
             // -> Contains: Verifica se um texto contém outro. Não aceita valor Null 
 
-            // var texto = "Testando";
-            // Console.WriteLine(texto.CompareTo("Testando")); // 0 pois os textos são iguais
-            // Console.WriteLine(texto.CompareTo("testando")); // 1 pois 
-            // Console.WriteLine(texto.Contains('t')); // true pois texto contém a letra 't'
-            // Console.WriteLine(texto.Contains("testando")); // false pois C# é case-sensitive
-            // Console.WriteLine(texto.Contains("testando", StringComparison.OrdinalIgnoreCase)); // true pois é ignorada a case-sensitive
-            // Console.WriteLine(texto.Contains(null)); // Console.WriteLine(texto.Contains("testando"));
+            var texto = "Testando";
+            Console.WriteLine(texto.CompareTo("Testando")); // 0 pois os textos são iguais
+            Console.WriteLine(texto.CompareTo("testando")); // 1 pois 
+            Console.WriteLine(texto.Contains('t')); // true pois texto contém a letra 't'
+            Console.WriteLine(texto.Contains("testando")); // false pois C# é case-sensitive
+            Console.WriteLine(texto.Contains("testando", StringComparison.OrdinalIgnoreCase)); // true pois é ignorada a case-sensitive
+            // Console.WriteLine(texto.Contains(null)); // Unhandled exception. System.ArgumentNullException: Value cannot be null
 
 
 
             // StartsWith/EndsWith
             // -> Verifica se um texto inicia ou termina com outro
 
-            // var texto = "Testando a string";
-            // Console.WriteLine(texto.StartsWith("Test")); // true
-            // Console.WriteLine(texto.StartsWith("test")); // false
-            // Console.WriteLine(texto.StartsWith("test", StringComparison.OrdinalIgnoreCase)); // true           
-            // Console.WriteLine(texto.EndsWith("ings")); // false
-            // Console.WriteLine(texto.EndsWith("ing")); // true
+            texto = "Testando a string";
+            Console.WriteLine(texto.StartsWith("Test")); // true
+            Console.WriteLine(texto.StartsWith("test")); // false
+            Console.WriteLine(texto.StartsWith("test", StringComparison.OrdinalIgnoreCase)); // true           
+            Console.WriteLine(texto.EndsWith("ings")); // false
+            Console.WriteLine(texto.EndsWith("ing")); // true
 
 
             // EQUALS
             // -> Verifica se toda a extensão de um texto é igual ao outro
             // -> Aceita valor Null 
 
-            // var texto = "Testando a string";
-            // Console.WriteLine(texto.Equals("Testando a string")); // true
-            // Console.WriteLine(texto.Equals("testando a string")); // false
-            // Console.WriteLine(texto.Equals("testando a string", StringComparison.OrdinalIgnoreCase)); // true
-            // Console.WriteLine(texto.Equals(null)); // false
+            texto = "Testando a string";
+            Console.WriteLine(texto.Equals("Testando a string")); // true
+            Console.WriteLine(texto.Equals("testando a string")); // false
+            Console.WriteLine(texto.Equals("testando a string", StringComparison.OrdinalIgnoreCase)); // true
+            Console.WriteLine(texto.Equals(null)); // false
 
 
             // INDEXOF e LASTINDEXOF
             // -> INDEXOF Verifica a PRIMEIRA posição/índex de uma string dentro de outra 
             // -> LASTINDEXOF Verifica a ÚLTIMA posição/índex de uma string dentro de outra
             // -> Não recebem valor null
-            // var texto = "Este texto é um teste";
-            // Console.WriteLine(texto.IndexOf("e")); // 11 
-            // Console.WriteLine(texto.LastIndexOf("t")); // 19
+            texto = "Este texto é um teste";
+            Console.WriteLine(texto.IndexOf("e")); // 11 
+            Console.WriteLine(texto.LastIndexOf("t")); // 19
 
 
             // TOUPPER e TOLOWER
             // -> Converte uma string para maiúsculo ou minúsculo
             // -> Aceita valor null
-            // var texto = "Testando a string";
-            // Console.WriteLine(texto.ToUpper()); // TESTANDO A STRING
-            // Console.WriteLine(texto.ToLower()); // testando a string
+            texto = "Testando a string";
+            Console.WriteLine(texto.ToUpper()); // TESTANDO A STRING
+            Console.WriteLine(texto.ToLower()); // testando a string
 
 
-            //INSERT, REMOVE E LENGTH
+            // INSERT, REMOVE E LENGTH
             // -> INSERT -> Insere um texto em uma string a partir do index informado
             // -> REMOVE -> Remove um texto de uma string a partir do index informado
             // -> LENGTH -> Retorna o tamanho/quantidade de caracteres de uma string
-            // var texto = "Testando a string"; 
-            // Console.WriteLine(texto.Insert(17, " inserindo.")); // Testando a string inserindo.
-            // Console.WriteLine(texto.Remove(0, 9)); // a string
-            // Console.WriteLine(texto.Length); // 17
+            texto = "Testando a string"; 
+            Console.WriteLine(texto.Insert(17, " inserindo.")); // Testando a string inserindo.
+            Console.WriteLine(texto.Remove(0, 9)); // a string
+            Console.WriteLine(texto.Length); // 17
 
 
             // REPLACE, SPLIT, SUBSTRING, TRIM
@@ -120,7 +120,7 @@ namespace MyApp
             // -> SPLIT -> Quebra uma string em um array de strings
             // -> SUBSTRING -> Retorna uma parte da string a partir do index informado
 
-            var texto = "Este texto é um teste";
+            texto = "Este texto é um teste";
 
             Console.WriteLine(texto.Replace("e", "X")); // pega cada um dos "e" no texto e sustitui por "X"
             Console.WriteLine(texto.Replace("xxxxxxx", "X")); // caso não encontre o texto, ele retorna a string original
