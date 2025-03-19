@@ -54,14 +54,23 @@ namespace MyApp
 
             // COMPARAÇÃO DE STRINGS
 
-            var texto = "Testando";
-            Console.WriteLine(texto.CompareTo("Testando")); // 0 pois os textos são iguais
-            Console.WriteLine(texto.CompareTo("testando")); // 1 pois 
-            Console.WriteLine(texto.Contains('t')); // true pois texto contém a letra 't'
-            Console.WriteLine(texto.Contains("testando")); // false pois C# é case-sensitive
-            Console.WriteLine(texto.Contains("testando", StringComparison.OrdinalIgnoreCase)); // true pois é ignorada a case-sensitive
-            Console.WriteLine(texto.Contains(null)); // Console.WriteLine(texto.Contains("testando"));
+            // var texto = "Testando";
+            // Console.WriteLine(texto.CompareTo("Testando")); // 0 pois os textos são iguais
+            // Console.WriteLine(texto.CompareTo("testando")); // 1 pois 
+            // Console.WriteLine(texto.Contains('t')); // true pois texto contém a letra 't'
+            // Console.WriteLine(texto.Contains("testando")); // false pois C# é case-sensitive
+            // Console.WriteLine(texto.Contains("testando", StringComparison.OrdinalIgnoreCase)); // true pois é ignorada a case-sensitive
+            // Console.WriteLine(texto.Contains(null)); // Console.WriteLine(texto.Contains("testando"));
 
+
+
+            // StartsWith/EndsWith
+            var texto = "Testando a string";
+            Console.WriteLine(texto.StartsWith("Test")); // true
+            Console.WriteLine(texto.StartsWith("test")); // false
+            Console.WriteLine(texto.StartsWith("test", StringComparison.OrdinalIgnoreCase)); // true           
+            Console.WriteLine(texto.EndsWith("ings")); // false
+            Console.WriteLine(texto.EndsWith("ing")); // true
         }
     }
 }
