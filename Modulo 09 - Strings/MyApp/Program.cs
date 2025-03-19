@@ -109,10 +109,35 @@ namespace MyApp
             // -> INSERT -> Insere um texto em uma string a partir do index informado
             // -> REMOVE -> Remove um texto de uma string a partir do index informado
             // -> LENGTH -> Retorna o tamanho/quantidade de caracteres de uma string
-            var texto = "Testando a string"; 
-            Console.WriteLine(texto.Insert(17, " inserindo.")); // Testando a string inserindo.
-            Console.WriteLine(texto.Remove(0, 9)); // a string
-            Console.WriteLine(texto.Length); // 17
+            // var texto = "Testando a string"; 
+            // Console.WriteLine(texto.Insert(17, " inserindo.")); // Testando a string inserindo.
+            // Console.WriteLine(texto.Remove(0, 9)); // a string
+            // Console.WriteLine(texto.Length); // 17
+
+
+            // REPLACE, SPLIT, SUBSTRING, TRIM
+            // -> REPLACE -> Substitui um texto por outro na string
+            // -> SPLIT -> Quebra uma string em um array de strings
+            // -> SUBSTRING -> Retorna uma parte da string a partir do index informado
+
+            var texto = "Este texto é um teste";
+
+            Console.WriteLine(texto.Replace("e", "X")); // pega cada um dos "e" no texto e sustitui por "X"
+            Console.WriteLine(texto.Replace("xxxxxxx", "X")); // caso não encontre o texto, ele retorna a string original
+
+            var divisao = texto.Split(); // separa a string em um array de strings
+            Console.WriteLine(divisao[0]);
+            Console.WriteLine(divisao[1]);
+            Console.WriteLine(divisao[2]);
+            Console.WriteLine(divisao[3]);
+            Console.WriteLine(divisao[4]);
+
+
+            var resultado = texto.Substring(16, 5); // retorna 5 caracteres a partir do index informado, ou seja, pega uma parte da string
+            Console.WriteLine(resultado);
+
+            var textoSemEspaco = "   Este texto é um teste      ".Trim(); // retorna a string sem espaços antes e depois do texto
+            Console.WriteLine(textoSemEspaco);
 
 
         }
