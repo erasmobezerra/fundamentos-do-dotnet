@@ -76,7 +76,7 @@ namespace EditorHTML
             {
                 case 1: {
                     Console.SetCursorPosition(10, 11); 
-                    Console.WriteLine("Editor"); 
+                    Editor.Show(); 
                     break;
                 }
                 case 2: {
