@@ -12,7 +12,7 @@ namespace EditorHTML
             Console.ForegroundColor = ConsoleColor.Black;
             Console.Clear();
             Console.WriteLine("MODO EDITOR");
-            Console.WriteLine("===========");
+            Console.WriteLine("----------------------------------------");
             Start();
         }
 
@@ -20,16 +20,15 @@ namespace EditorHTML
         {
             var file = new StringBuilder();
 
-            do {
+            do
+            {
                 file.Append(Console.ReadLine());
                 file.Append(Environment.NewLine);
-            } while (Console.ReadKey().Key != ConsoleKey.Escape);
-
-            Console.WriteLine("-----------");
-            Console.WriteLine("Deseja salvar o arquivo?");
-            
+            }
+            while (Console.ReadKey().Key != ConsoleKey.Escape);
+            Console.WriteLine("----------------------------------------");
+            Console.WriteLine("Deseja salvar este arquivo?");
+            Viewer.Show(file.ToString());
         }
-
-
     }
 }

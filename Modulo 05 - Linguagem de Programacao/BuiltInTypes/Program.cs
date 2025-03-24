@@ -1,48 +1,96 @@
-﻿//byte (8-bit) -> 0 até 255
-byte num1 = 255;
-// sbyte (8-bit) -> -128 até 127
-sbyte num2 = -128;
+﻿// //byte (8-bit) -> 0 até 255
+// byte num1 = 255;
+// // sbyte (8-bit) -> -128 até 127
+// sbyte num2 = -128;
 
 
-// Numeros Inteiros
-//short (16-bit) -> -32.768 até 32.767
-short num3 = -32768;
-//ushort (16-bit) -> 0 até 65.535
-ushort num4 = 65535;
-//int (32-bit) -> -2.147.483.648 até 2.147.483.647
-int num5 = -2147483648;
-//uint (32-bit) -> 0 até 4.294.967.295
-uint num6 = 4294967295;
-//long (64-bit) -> -9.223.372.036.854.775.808 até 9.223.372.036.854.775.807
-long num7 = -9223372036854775808;
-//ulong (64-bit) -> 0 até 18.446.744.073.709.551.615
-ulong num8 = 18446744073709551615;
+// // Numeros Inteiros
+// //short (16-bit) -> -32.768 até 32.767
+// short num3 = -32768;
+// //ushort (16-bit) -> 0 até 65.535
+// ushort num4 = 65535;
+// //int (32-bit) -> -2.147.483.648 até 2.147.483.647
+// int num5 = -2147483648;
+// //uint (32-bit) -> 0 até 4.294.967.295
+// uint num6 = 4294967295;
+// //long (64-bit) -> -9.223.372.036.854.775.808 até 9.223.372.036.854.775.807
+// long num7 = -9223372036854775808;
+// //ulong (64-bit) -> 0 até 18.446.744.073.709.551.615
+// ulong num8 = 18446744073709551615;
 
-// Numeros Reais
-//float (32-bit) -> 1.4E-45 ate 3.402823E+38
-float num9 = 3.402823E+38f;
-//double (64-bit) -> 4.9E-324 ate 1.7976931348623157E+308
-double num10 = 1.7976931348623157E+308;
-
-
-// Caracteres -> Um unico caractere
-char letra = 'a';
-char simbolo = '\u00A9';
-
-// Booleanos -> Verdadeiro ou Falso
-bool verdadeiro = true;
-bool falso = false;     
-
-// Strings -> Cadeia de Caracteres, como uma lista de char
-string palavra = "Teste";
+// // Numeros Reais
+// //float (32-bit) -> 1.4E-45 ate 3.402823E+38
+// float num9 = 3.402823E+38f;
+// //double (64-bit) -> 4.9E-324 ate 1.7976931348623157E+308
+// double num10 = 1.7976931348623157E+308;
 
 
-// Var -> Variável dinâmica
-var variavel = "Teste"; // tipo string
-int? numero = null; // tipo int 
+// // Caracteres -> Um unico caractere
+// char letra = 'a';
+// char simbolo = '\u00A9';
 
-// Object -> tipo genérico que recebe qualquer valor ou objeto
-object quantidade = "Ilimitada";
-quantidade = 12;
-quantidade = 1.55;
-quantidade  = false; 
+// // Booleanos -> Verdadeiro ou Falso
+// bool verdadeiro = true;
+// bool falso = false;     
+
+// // Strings -> Cadeia de Caracteres, como uma lista de char
+// string palavra = "Teste";
+
+
+// // Var -> Variável dinâmica
+// var variavel = "Teste"; // tipo string
+// int? numero = null; // tipo int 
+
+// // Object -> tipo genérico que recebe qualquer valor ou objeto
+// object quantidade = "Ilimitada";
+// quantidade = 12;
+// quantidade = 1.55;
+// quantidade  = false; 
+
+using System.Text.RegularExpressions;
+
+namespace BuiltInTypes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var text = "<strong>negrito</strong>";
+            Replace(text);
+        }
+
+        public static void Replace(string text)
+        {
+            //var strong = new Regex(@"<\s\s*strong[^>]*>(.*?)<\s*/\s*strong>");
+            var strong = new Regex(@"<\s*strong[^>]*>\s*(\w+)\s*<\s*/\s*strong\s*>");
+
+            var words = text.Split(' ');
+
+            for (var i = 0; i < words.Length; i++)
+            {
+                if (strong.IsMatch(words[i]))
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write(
+                        words[i].Substring(
+                            words[i].IndexOf('>') + 1,
+                            (
+                                (words[i].LastIndexOf('<') - 1) -
+                                words[i].IndexOf('>')
+                            )
+
+
+                        )
+                    );
+                    Console.Write(" ");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.Write(words[i]);
+                    Console.Write(" ");
+                }
+            }
+        }
+    }
+}
